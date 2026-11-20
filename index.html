@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Losing Service Leads | ActiveCampaign Free Trial</title>
+  <meta name="description" content="78% of service clients buy from the provider who responds first. Automate your lead intake, follow-ups, and booking with ActiveCampaign. Claim your 14-day free trial.">
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #111827;
+      --bg-card: #1e293b;
+      --border-color: #334155;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-blue: #2563eb;
+      --accent-cyan: #06b6d4;
+      --accent-glow: rgba(37, 99, 235, 0.35);
+      --badge-bg: rgba(6, 182, 212, 0.12);
+      --badge-text: #38bdf8;
+      --danger: #ef4444;
+      --success: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Navigation */
+    header {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    }
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-cta {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .nav-cta:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #475569;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5rem 0 3.5rem;
+      text-align: center;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+    .hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span.gradient {
+      background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p.lead {
+      font-size: clamp(1.125rem, 2vw, 1.25rem);
+      color: var(--text-secondary);
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* CTA Button */
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 3.5rem;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.625rem;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      font-size: 1.125rem;
+      font-weight: 700;
+      padding: 1.1rem 2.5rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      box-shadow: 0 10px 25px -5px var(--accent-glow), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+      transition: all 0.25s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px -4px var(--accent-glow), 0 0 0 1px rgba(255, 255, 255, 0.25) inset;
+      background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    }
+    .cta-subtext {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 4rem;
+    }
+    .stat-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 0.25rem;
+    }
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    /* Comparison Section */
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    @media (max-width: 768px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .comparison-card {
+      background: var(--bg-secondary);
+      border-radius: 0.875rem;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+    }
+    .comparison-card.negative {
+      border-color: rgba(239, 68, 68, 0.4);
+    }
+    .comparison-card.positive {
+      border-color: rgba(16, 185, 129, 0.5);
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, var(--bg-secondary) 100%);
+    }
+    .comparison-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .comparison-list {
+      list-style: none;
+    }
+    .comparison-list li {
+      margin-bottom: 1rem;
+      font-size: 0.9375rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+    }
+    .comparison-list li span.icon {
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    /* Feature Highlights */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 0.875rem;
+      padding: 1.75rem;
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 0.5rem;
+      background: rgba(37, 99, 235, 0.2);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      color: #60a5fa;
+    }
+    .feature-card h4 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    /* Final CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .cta-banner h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .cta-banner p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Footer & FTC Disclosure */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 3rem 0;
+      color: var(--text-muted);
+      font-size: 0.8125rem;
+      text-align: center;
+    }
+    .ftc-disclosure {
+      background: rgba(17, 24, 39, 0.6);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      border-radius: 0.5rem;
+      padding: 1rem 1.25rem;
+      margin: 0 auto 2rem;
+      max-width: 800px;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .ftc-disclosure strong {
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">AutoBridge CRM</a>
+      <a href="https://www.activecampaign.com/?_r=YOUR_REF_ID" target="_blank" rel="noopener noreferrer" class="nav-cta">Try ActiveCampaign Free &rarr;</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="pill">
+        <span>⚡ Built for Modern Service Businesses</span>
+      </div>
+      <h1>Stop Losing Qualified Clients to <br><span class="gradient">Slow Manual Follow-Ups</span></h1>
+      <p class="lead">
+        78% of service clients book with the first company that responds. If your leads wait hours for a manual quote or reply, your competitors win the business. ActiveCampaign automates your client acquisition pipeline in minutes.
+      </p>
+
+      <div class="cta-group">
+        <a href="https://www.activecampaign.com/?_r=YOUR_REF_ID" target="_blank" rel="noopener noreferrer" class="btn-primary" id="primary-cta">
+          Start Your Free 14-Day Trial &rarr;
+        </a>
+        <span class="cta-subtext">Instant setup &bull; No credit card required &bull; Cancel anytime</span>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">&lt; 60s</div>
+        <div class="stat-label">Instant lead response time via automated SMS & email</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">3.4x</div>
+        <div class="stat-label">Higher lead-to-consultation conversion rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">10+ Hrs</div>
+        <div class="stat-label">Saved weekly by eliminating manual CRM updates</div>
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section>
+      <h2 class="section-title">The Cost of Manual Lead Management</h2>
+      <p class="section-subtitle">How relying on spreadsheets and manual replies quietly drains your revenue.</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card negative">
+          <h3><span style="color: var(--danger)">✕</span> Manual Service Workflow</h3>
+          <ul class="comparison-list">
+            <li><span class="icon" style="color: var(--danger)">✕</span> Inquiries sit in unmonitored inboxes during evenings & weekends.</li>
+            <li><span class="icon" style="color: var(--danger)">✕</span> Leads cool off while waiting 4–24 hours for a quote.</li>
+            <li><span class="icon" style="color: var(--danger)">✕</span> Inconsistent follow-up: 48% of salespeople never follow up twice.</li>
+            <li><span class="icon" style="color: var(--danger)">✕</span> Disconnected tools lead to duplicate entries and human error.</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card positive">
+          <h3><span style="color: var(--success)">✓</span> ActiveCampaign Automation</h3>
+          <ul class="comparison-list">
+            <li><span class="icon" style="color: var(--success)">✓</span> Sub-60-second automated personal response with direct calendar booking.</li>
+            <li><span class="icon" style="color: var(--success)">✓</span> Multi-touch follow-up sequences across email, SMS, and pipeline stages.</li>
+            <li><span class="icon" style="color: var(--success)">✓</span> Smart lead scoring prioritizes ready-to-buy high-ticket prospects.</li>
+            <li><span class="icon" style="color: var(--success)">✓</span> All client interactions logged centrally with 900+ app integrations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features -->
+    <section>
+      <h2 class="section-title">Why Top Service Teams Choose ActiveCampaign</h2>
+      <p class="section-subtitle">Turn curious inquiries into booked calendar appointments on complete autopilot.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h4>Visual Automation Builder</h4>
+          <p>Deploy proven, drag-and-drop follow-up recipes designed specifically for service and consulting businesses in under 15 minutes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h4>Automated Lead Scoring</h4>
+          <p>Identify which prospects are clicking your pricing, reviewing proposals, and ready to sign before you even pick up the phone.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h4>Omnichannel SMS & Email</h4>
+          <p>Combine high-deliverability email follow-ups with instant text reminders to ensure appointments actually show up.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="cta-banner">
+      <h2>Automate Your Lead Pipeline Today</h2>
+      <p>Experience how ActiveCampaign helps service businesses close more clients with zero manual overhead. Test every premium feature free for 14 days.</p>
+      <a href="https://www.activecampaign.com/?_r=YOUR_REF_ID" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        Claim Your 14-Day Free ActiveCampaign Trial &rarr;
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer with FTC Affiliate Disclosure -->
+  <footer>
+    <div class="container">
+      <div class="ftc-disclosure">
+        <strong>FTC Affiliate Disclosure:</strong> We believe in full transparency. Some of the links on this website, including links to ActiveCampaign, are affiliate links. This means that if you choose to sign up or make a purchase through our links, we may receive an affiliate commission at absolutely no additional cost to you. We only recommend marketing and CRM automation tools that we believe provide measurable value to service businesses.
+      </div>
+      <p>&copy; 2026 AutoBridge. All rights reserved. ActiveCampaign is a registered trademark of ActiveCampaign, Inc.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+campaign_config.txt
+MISSION.md
+leads.csv
+targets.txt
+lead_finder.py
+.gemini/
+__pycache__/
+*.pyc
